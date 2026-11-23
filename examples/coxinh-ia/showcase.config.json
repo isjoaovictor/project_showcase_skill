@@ -1,0 +1,54 @@
+{
+  "project": {
+    "id": "coxinh-ia",
+    "name": "Coxinh.IA",
+    "tagline": "Ingredientes improváveis, receitas de coxinha e uma equipe de agentes por trás da criação.",
+    "origin": "Projeto de humor e sátira criado por João Santos e Caio Brayner para aplicar os estudos de engenharia de IA durante o bootcamp da Deloitte. A ideia nasceu de uma brincadeira da turma sobre a coxinha da padaria do Moinho."
+  },
+  "brand": {
+    "colors": {
+      "background": "#000000",
+      "foreground": "#FFFFFF",
+      "accent": "#86BC25",
+      "surface": "#161616"
+    },
+    "typography": {"headings": "condensada", "body": "sans-serif legível"},
+    "logo": "docs/design/Coxinh.IA  logo nome.png",
+    "symbol": "docs/design/Coxinh.IA marca.png",
+    "style": "Editorial com grandes títulos condensados, fundo preto, trechos claros, composições arejadas e movimentos discretos. Preservar o logotipo oficial."
+  },
+  "experience": {
+    "kind": "interactive_product_showcase",
+    "not": ["curso", "quiz", "exercício", "aula", "terminal didático"],
+    "chapters": ["A ideia", "A origem", "A jornada", "Os agentes", "Tecnologias aplicadas", "Engenharia", "Estado atual"]
+  },
+  "features": [
+    {"name": "Fluxo multiagente Chef, SubChef, Cozinheiro e Saúde", "status": "implemented", "evidence": "README.md, fluxo documentado em src/graph/builder.py"},
+    {"name": "Impasse e retomada na mesma sessão", "status": "implemented", "evidence": "README.md, src/recipe_session.py"},
+    {"name": "Ferramentas MCP", "status": "implemented", "evidence": "README.md, mcp_server/"},
+    {"name": "Geração visual usando provedor real", "status": "planned", "evidence": "README.md e docs/design/design.md: backend atual simula referência de imagem"},
+    {"name": "Interface web", "status": "planned", "evidence": "README.md: ainda não existe interface pronta"},
+    {"name": "Observabilidade Langfuse", "status": "planned", "evidence": "README.md: não integrada"},
+    {"name": "Persistência entre reinícios", "status": "planned", "evidence": "README.md: checkpoints e histórico em memória"}
+  ],
+  "technology": [
+    {"name": "LangGraph", "role": "orquestração do fluxo", "reason": "Conectar criação, revisão, retorno e Impasse com regras explícitas.", "status": "implemented"},
+    {"name": "LLM", "role": "criação de conteúdo", "reason": "Gerar e revisar propostas de receita estruturadas.", "status": "implemented"},
+    {"name": "MCP", "role": "ferramentas", "reason": "Expôr validação e geração de imagem por interfaces reutilizáveis.", "status": "implemented"},
+    {"name": "Pesquisa web", "role": "contexto para saúde", "reason": "Embasar avisos e registrar fontes e incertezas.", "status": "implemented"},
+    {"name": "Geração de imagem", "role": "representação visual", "reason": "Transformar a descrição da receita em imagem correspondente.", "status": "simulated"},
+    {"name": "Langfuse", "role": "observabilidade", "reason": "Rastrear decisões, chamadas e falhas para análise.", "status": "planned"}
+  ],
+  "sources": [
+    {"name": "README.md", "url": "https://github.com/Caio-GBrayner/Coxinh.IA/blob/main/README.md", "checked_at": "2026-11-22"},
+    {"name": "docs/design/design.md", "url": "https://github.com/Caio-GBrayner/Coxinh.IA/blob/main/docs/design/design.md", "checked_at": "2026-11-22"},
+    {"name": "Referência educativa de HTML", "url": "https://github.com/Theteu1/Semana-3-Bootcamp/blob/main/slides.html", "checked_at": "2026-11-22"}
+  ],
+  "constraints": [
+    "Não modificar o produto nem publicar PR.",
+    "O showcase pode apresentar simulações, mas não afirmar que o navegador executa o backend real.",
+    "Não mostrar imagem simulada como se tivesse sido gerada por um provedor real.",
+    "Sem quizzes, exercícios ou linguagem de professor.",
+    "Não copiar identidade visual de terceiros; usar os ativos próprios do Coxinh.IA."
+  ]
+}

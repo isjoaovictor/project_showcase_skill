@@ -1,0 +1,4 @@
+interface:
+  display_name: "Project Showcase"
+  short_description: "Apresente projetos de software em experiências HTML interativas."
+  default_prompt: "Use esta skill para analisar o repositório atual e criar um showcase interativo de produto, narrativa e decisões técnicas."

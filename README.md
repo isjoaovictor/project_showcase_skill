@@ -20,6 +20,12 @@ Peça ao agente:
 
 O arquivo de exemplo usa uma assinatura textual estilizada com a grafia do projeto. Para a versão final da marca, importe o logotipo existente em `docs/design/` conforme o `design.md` do repositório; ele não foi copiado para este pacote.
 
+## Revisão do design system e apresentação em TV
+
+A Rev01 incorpora aprendizados verificados no Coxinh.IA Showcase: tipografia editorial em capitalização natural, escalas específicas para telas grandes, ampliação proporcional de textos e diagramas, checagem da cascata CSS e validação da mídia principal. Consulte `references/display-and-typography.md`.
+
+As famílias Space Grotesk e Manrope, a paleta e o tema culinário permanecem **exclusivos do exemplo Coxinh.IA**. Não devem ser impostos a outros projetos. No exemplo, o estado atual apresenta oito capítulos, incluindo o grafo Mermaid antes do estado do projeto. A fonte externa pode falhar e o CSS base ainda usa fallbacks legados fora da media query ampla; a skill deve reconhecer e relatar esses limites.
+
 ## Arquivos
 
 - `SKILL.md`: gatilhos, entradas, regras e fluxo de execução da skill.
@@ -27,6 +33,7 @@ O arquivo de exemplo usa uma assinatura textual estilizada com a grafia do proje
 - `references/visual-and-interaction.md`: experiência visual e regras de interação.
 - `references/config.schema.md`: contrato do JSON específico de cada projeto.
 - `references/quality-gates.md`: revisão final.
+- `references/display-and-typography.md`: tipografia, composição, mídias de apresentação e testes.
 - `examples/coxinh-ia/`: caso concreto de aplicação, sem contaminar o comportamento genérico.
 
 ## Fontes do exemplo

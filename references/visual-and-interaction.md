@@ -3,8 +3,8 @@
 ## Identidade
 
 1. Priorize o arquivo de identidade visual da fonte. Reuse logos e fotografias existentes; não crie aproximações com marcas conhecidas.
-2. Defina tokens CSS de cor, família de títulos, família de texto, escala, raios, espaçamento e duração de animação; evite espalhar cores hardcoded por componentes.
-3. Reuse padrões de navegação e controles, mas alterne composições: capa, editorial, fluxo, cards narrativos, recursos, final.
+2. Defina tokens CSS de cor, família de títulos, família de texto, escala, raios, espaçamento e duração de animação; evite espalhar cores hardcoded por componentes. Registre se o projeto já tem tokens e *não os substitua apenas por estilo*. Verifique se fontes carregadas são efetivamente usadas nas regras CSS.
+3. Reuse padrões de navegação e controles, mas alterne composições: capa, editorial, fluxo, cards narrativos, recursos, final. Use proporções equilibradas entre imagens, títulos e texto, com uma ideia dominante por capítulo.
 4. Use cada animação para indicar relação ou transição de informação. Reduza o movimento se `prefers-reduced-motion` estiver ativo.
 5. Preserve nomes, acentuação e grafia da marca conforme o repositório.
 
@@ -34,3 +34,7 @@
 - `prefers-reduced-motion` suportado.
 - Imagens têm alt. Assets ausentes usam fallback textual, não exibem imagem quebrada.
 - Não invente esquema de cor caso o `design.md` já estabeleça um.
+- Para apresentação em TV ou projetor, teste legibilidade à distância e escalas de títulos, texto explicativo, imagens e controles; não trate essa necessidade apenas como responsividade mobile.
+- Prefira capitalização natural em títulos; reserve caixa alta para pequenos rótulos ou casos em que a identidade a exija. Preserve siglas e marcas.
+
+Consulte `display-and-typography.md` para critérios, exemplos de tokens e validação.

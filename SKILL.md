@@ -57,6 +57,8 @@ Prefira um site HTML responsivo de navegação por capítulos: abertura forte; n
 
 A identidade vem de `showcase.config.json` (modelo em `references/config.schema.md`): nome, cores, tipografia, ativos, tom, seções, fontes e permissões. Respeite o guia visual do produto acima de tendências genéricas.
 
+**Escala e tipografia:** leia `references/display-and-typography.md`. Descubra a mídia principal (monitor, TV, projetor ou celular) antes de escolher tamanhos. Priorize hierarquia por escala, peso e espaçamento, não por caixa alta indiscriminada. Preserve a grafia das marcas. Escolha fontes modernas coerentes com a identidade, carregue-as efetivamente e confirme sua aplicação nos breakpoints relevantes. Em TV, trate texto, ícones, imagens e controles como um conjunto legível à distância, sem cortes nem overflow. Não aplique as fontes ou medidas do exemplo Coxinh.IA a outros projetos por padrão.
+
 ### 4. Interatividade honesta
 
 Uma simulação didática pode avançar/voltar pelos nós, destacar o passo atual, mostrar o dado de entrada e o que mudou no estado, comparar aprovação/reprovação e abrir detalhes de uma decisão. **Não conecte o mock a um backend imaginário nem finja logs reais.** Mostre rótulo visível `Simulação ilustrativa`.
@@ -76,10 +78,10 @@ Se produzir código, descreva brevemente cada bloco adicionado e como os dados p
 
 ### 6. Revisão antes da entrega
 
-Leia `references/quality-gates.md` e valide: fidelidade narrativa; status verdadeiros; marca correta; nenhuma aula/quiz; demonstração controlável; contraste, teclado e movimento reduzido; experiência em 390px, 768px e 1440px; sem dependência externa desnecessária; sem segredos. Se possível, capture e examine uma renderização no navegador.
+Leia `references/quality-gates.md` e valide: fidelidade narrativa; status verdadeiros; marca correta; nenhuma aula/quiz; demonstração controlável; contraste, teclado e movimento reduzido; experiência nas larguras relevantes ao público e à mídia (incluindo 390px, 768px, 1440px e, quando houver TV, 1920×1080); sem dependência externa desnecessária; sem segredos. Se possível, capture e examine uma renderização no navegador.
 
 ## Exemplos e referências
 
 - Exemplo de projeto: `examples/coxinh-ia/showcase.config.json` e `examples/coxinh-ia/storyboard.md`.
-- Referências de roteiro e interações: `references/narrative.md` e `references/visual-and-interaction.md`.
+- Referências de roteiro, interações e apresentação em telas grandes: `references/narrative.md`, `references/visual-and-interaction.md` e `references/display-and-typography.md`.
 - As regras do exemplo **não são universais**; nenhum outro projeto deve herdar a marca Coxinh.IA.

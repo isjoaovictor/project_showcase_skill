@@ -12,37 +12,157 @@
       "accent": "#86BC25",
       "surface": "#161616"
     },
-    "typography": {"headings": "condensada", "body": "sans-serif legível"},
+    "typography": {
+      "headings": "Space Grotesk, sans-serif em telas amplas",
+      "body": "Manrope, sans-serif em telas amplas",
+      "source": "Google Fonts (requer conexão, com fallback)",
+      "capitalization": "Títulos em caixa mista; caixa alta para pequenos rótulos",
+      "implementationNote": "No código consultado, a media query min-width:1200px e min-height:700px substitui os tokens de fontes base. Fora dela, permanecem Inter/Segoe UI e Arial Narrow/Roboto Condensed/Impact. Não tratar como migração global concluída."
+    },
     "logo": "docs/design/Coxinh.IA  logo nome.png",
     "symbol": "docs/design/Coxinh.IA marca.png",
-    "style": "Editorial com grandes títulos condensados, fundo preto, trechos claros, composições arejadas e movimentos discretos. Preservar o logotipo oficial."
+    "style": "Editorial de contraste preto, branco e verde #86BC25, com tipografia contemporânea e títulos em capitalização natural. Space Grotesk e Manrope são escolhas deste caso, com escala ampliada para viewport de apresentação e composição arejada. Preservar logotipo e assets da marca.",
+    "media": {
+      "primary": "tv",
+      "referenceViewport": "1920x1080",
+      "otherViewport": "1366x768",
+      "note": "Contexto do exemplo, nunca padrão universal."
+    },
+    "presentation": {
+      "priorityChapters": [
+        "A ideia",
+        "A origem",
+        "Fluxo dos nós",
+        "Hoje e amanhã"
+      ],
+      "principles": [
+        "Ampliar explicações, controles e diagramas em apresentações a distância",
+        "Verificar que títulos e imagens cabem no viewport real",
+        "Dimensionar largura de coluna, line-height e texto em conjunto",
+        "Separar papéis tipográficos por hierarquia"
+      ],
+      "constraints": [
+        "Evitar overflow e colisões com títulos longos",
+        "Mermaid depende de CDN e requer fallback legível em uso offline"
+      ]
+    }
   },
   "experience": {
     "kind": "interactive_product_showcase",
-    "not": ["curso", "quiz", "exercício", "aula", "terminal didático"],
-    "chapters": ["A ideia", "A origem", "A jornada", "Os agentes", "Tecnologias aplicadas", "Engenharia", "Estado atual"]
+    "not": [
+      "curso",
+      "quiz",
+      "exercício",
+      "aula",
+      "terminal didático"
+    ],
+    "chapters": [
+      "A ideia",
+      "A origem",
+      "A jornada",
+      "Os agentes",
+      "Tecnologias aplicadas",
+      "Engenharia",
+      "Fluxo dos nós",
+      "Hoje e amanhã"
+    ]
   },
   "features": [
-    {"name": "Fluxo multiagente Chef, SubChef, Cozinheiro e Saúde", "status": "implemented", "evidence": "README.md, fluxo documentado em src/graph/builder.py"},
-    {"name": "Impasse e retomada na mesma sessão", "status": "implemented", "evidence": "README.md, src/recipe_session.py"},
-    {"name": "Ferramentas MCP", "status": "implemented", "evidence": "README.md, mcp_server/"},
-    {"name": "Geração visual usando provedor real", "status": "planned", "evidence": "README.md e docs/design/design.md: backend atual simula referência de imagem"},
-    {"name": "Interface web", "status": "planned", "evidence": "README.md: ainda não existe interface pronta"},
-    {"name": "Observabilidade Langfuse", "status": "planned", "evidence": "README.md: não integrada"},
-    {"name": "Persistência entre reinícios", "status": "planned", "evidence": "README.md: checkpoints e histórico em memória"}
+    {
+      "name": "Fluxo multiagente Chef, SubChef, Cozinheiro e Saúde",
+      "status": "implemented",
+      "evidence": "README.md, fluxo documentado em src/graph/builder.py"
+    },
+    {
+      "name": "Impasse e retomada na mesma sessão",
+      "status": "implemented",
+      "evidence": "README.md, src/recipe_session.py"
+    },
+    {
+      "name": "Ferramentas MCP",
+      "status": "implemented",
+      "evidence": "README.md, mcp_server/"
+    },
+    {
+      "name": "Geração visual usando provedor real",
+      "status": "planned",
+      "evidence": "README.md e docs/design/design.md: backend atual simula referência de imagem"
+    },
+    {
+      "name": "Interface web",
+      "status": "planned",
+      "evidence": "README.md: ainda não existe interface pronta"
+    },
+    {
+      "name": "Observabilidade Langfuse",
+      "status": "planned",
+      "evidence": "README.md: não integrada"
+    },
+    {
+      "name": "Persistência entre reinícios",
+      "status": "planned",
+      "evidence": "README.md: checkpoints e histórico em memória"
+    }
   ],
   "technology": [
-    {"name": "LangGraph", "role": "orquestração do fluxo", "reason": "Conectar criação, revisão, retorno e Impasse com regras explícitas.", "status": "implemented"},
-    {"name": "LLM", "role": "criação de conteúdo", "reason": "Gerar e revisar propostas de receita estruturadas.", "status": "implemented"},
-    {"name": "MCP", "role": "ferramentas", "reason": "Expôr validação e geração de imagem por interfaces reutilizáveis.", "status": "implemented"},
-    {"name": "Pesquisa web", "role": "contexto para saúde", "reason": "Embasar avisos e registrar fontes e incertezas.", "status": "implemented"},
-    {"name": "Geração de imagem", "role": "representação visual", "reason": "Transformar a descrição da receita em imagem correspondente.", "status": "simulated"},
-    {"name": "Langfuse", "role": "observabilidade", "reason": "Rastrear decisões, chamadas e falhas para análise.", "status": "planned"}
+    {
+      "name": "LangGraph",
+      "role": "orquestração do fluxo",
+      "reason": "Conectar criação, revisão, retorno e Impasse com regras explícitas.",
+      "status": "implemented"
+    },
+    {
+      "name": "LLM",
+      "role": "criação de conteúdo",
+      "reason": "Gerar e revisar propostas de receita estruturadas.",
+      "status": "implemented"
+    },
+    {
+      "name": "MCP",
+      "role": "ferramentas",
+      "reason": "Expôr validação e geração de imagem por interfaces reutilizáveis.",
+      "status": "implemented"
+    },
+    {
+      "name": "Pesquisa web",
+      "role": "contexto para saúde",
+      "reason": "Embasar avisos e registrar fontes e incertezas.",
+      "status": "implemented"
+    },
+    {
+      "name": "Geração de imagem",
+      "role": "representação visual",
+      "reason": "Transformar a descrição da receita em imagem correspondente.",
+      "status": "simulated"
+    },
+    {
+      "name": "Langfuse",
+      "role": "observabilidade",
+      "reason": "Rastrear decisões, chamadas e falhas para análise.",
+      "status": "planned"
+    }
   ],
   "sources": [
-    {"name": "README.md", "url": "https://github.com/Caio-GBrayner/Coxinh.IA/blob/main/README.md", "checked_at": "2026-11-22"},
-    {"name": "docs/design/design.md", "url": "https://github.com/Caio-GBrayner/Coxinh.IA/blob/main/docs/design/design.md", "checked_at": "2026-11-22"},
-    {"name": "Referência educativa de HTML", "url": "https://github.com/Theteu1/Semana-3-Bootcamp/blob/main/slides.html", "checked_at": "2026-11-22"}
+    {
+      "name": "README.md",
+      "url": "https://github.com/Caio-GBrayner/Coxinh.IA/blob/main/README.md",
+      "checked_at": "2026-11-22"
+    },
+    {
+      "name": "docs/design/design.md",
+      "url": "https://github.com/Caio-GBrayner/Coxinh.IA/blob/main/docs/design/design.md",
+      "checked_at": "2026-11-22"
+    },
+    {
+      "name": "Referência educativa de HTML",
+      "url": "https://github.com/Theteu1/Semana-3-Bootcamp/blob/main/slides.html",
+      "checked_at": "2026-11-22"
+    },
+    {
+      "name": "Auditoria de design system do Coxinh.IA Showcase",
+      "url": "https://github.com/isjoaovictor/Coxinh.IA_Apresentacao/blob/main/index.html",
+      "checked_at": "2026-11-23"
+    }
   ],
   "constraints": [
     "Não modificar o produto nem publicar PR.",
